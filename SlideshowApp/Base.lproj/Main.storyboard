@@ -45,6 +45,9 @@
                                         <rect key="frame" x="236" y="0.0" width="53" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="再生"/>
+                                        <connections>
+                                            <action selector="onTouchPlayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L7c-q0-gy9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -61,6 +64,9 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="9vO-n2-nmE" id="p1L-gL-FeI"/>
+                        <outlet property="nextButton" destination="bam-qi-ncZ" id="Bg8-5U-bLF"/>
+                        <outlet property="playButton" destination="KpZ-Xl-YCz" id="IDX-pK-ni5"/>
+                        <outlet property="previousButton" destination="rUn-x8-x00" id="kdt-aK-3Ju"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
