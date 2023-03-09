@@ -13,6 +13,9 @@
 		ED31619329B9AFAD00A50FFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED31619129B9AFAD00A50FFB /* Main.storyboard */; };
 		ED31619529B9AFAF00A50FFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED31619429B9AFAF00A50FFB /* Assets.xcassets */; };
 		ED31619829B9AFAF00A50FFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED31619629B9AFAF00A50FFB /* LaunchScreen.storyboard */; };
+		ED3161A029B9B4C000A50FFB /* ramenImage1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED31619F29B9B4C000A50FFB /* ramenImage1.jpg */; };
+		ED3161A229B9B4C900A50FFB /* ramenImage2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED3161A129B9B4C900A50FFB /* ramenImage2.jpg */; };
+		ED3161A429B9B4D400A50FFB /* ramenImage3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED3161A329B9B4D400A50FFB /* ramenImage3.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		ED31619429B9AFAF00A50FFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED31619729B9AFAF00A50FFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED31619929B9AFAF00A50FFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED31619F29B9B4C000A50FFB /* ramenImage1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ramenImage1.jpg; sourceTree = "<group>"; };
+		ED3161A129B9B4C900A50FFB /* ramenImage2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ramenImage2.jpg; sourceTree = "<group>"; };
+		ED3161A329B9B4D400A50FFB /* ramenImage3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ramenImage3.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				ED31619429B9AFAF00A50FFB /* Assets.xcassets */,
 				ED31619629B9AFAF00A50FFB /* LaunchScreen.storyboard */,
 				ED31619929B9AFAF00A50FFB /* Info.plist */,
+				ED31619F29B9B4C000A50FFB /* ramenImage1.jpg */,
+				ED3161A129B9B4C900A50FFB /* ramenImage2.jpg */,
+				ED3161A329B9B4D400A50FFB /* ramenImage3.jpg */,
 			);
 			path = SlideshowApp;
 			sourceTree = "<group>";
@@ -126,6 +135,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED31619829B9AFAF00A50FFB /* LaunchScreen.storyboard in Resources */,
+				ED3161A029B9B4C000A50FFB /* ramenImage1.jpg in Resources */,
+				ED3161A229B9B4C900A50FFB /* ramenImage2.jpg in Resources */,
+				ED3161A429B9B4D400A50FFB /* ramenImage3.jpg in Resources */,
 				ED31619529B9AFAF00A50FFB /* Assets.xcassets in Resources */,
 				ED31619329B9AFAD00A50FFB /* Main.storyboard in Resources */,
 			);
