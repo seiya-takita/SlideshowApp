@@ -23,8 +23,6 @@ class ViewController: UIViewController {
     
     private var selectedIndex = 0
     
-    private var isPlayingSlideshow = false
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -59,6 +57,9 @@ class ViewController: UIViewController {
     }
     
     @objc func imageViewTapped(_ sender: UITapGestureRecognizer) {
+        if timer != nil {
+            pauseSlideshow()
+        }
         performSegue(withIdentifier: "toExpandImageView", sender: nil)
     }
     
@@ -85,25 +86,28 @@ class ViewController: UIViewController {
     }
     
     @IBAction func onTouchPlayButton(_ sender: Any) {
-        if isPlayingSlideshow {
-            timer.invalidate()
-            timer = nil
-            
-            isPlayingSlideshow = false
-            playButton.setTitle(playButtonText, for: .normal)
-            
-            nextButton.isEnabled = true
-            previousButton.isEnabled = true
+        if timer != nil {
+            pauseSlideshow()
             return
         }
-        
+        playSlideshow()
+    }
+    
+    private func playSlideshow() {
         timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateSlide(_:)), userInfo: nil, repeats: true)
         
-        isPlayingSlideshow = true
         playButton.setTitle(pauseButtonText, for: .normal)
-        
         nextButton.isEnabled = false
         previousButton.isEnabled = false
+    }
+    
+    private func pauseSlideshow() {
+        timer.invalidate()
+        timer = nil
+        
+        playButton.setTitle(playButtonText, for: .normal)
+        nextButton.isEnabled = true
+        previousButton.isEnabled = true
     }
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
