@@ -82,9 +82,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYa-Nf-biA">
-                                <rect key="frame" x="168" y="227" width="53" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C05-Ih-yCC">
+                                <rect key="frame" x="0.0" y="100" width="414" height="276"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="C05-Ih-yCC" secondAttribute="height" multiplier="800:533" id="EFn-GW-dgj"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYa-Nf-biA">
+                                <rect key="frame" x="180.5" y="430" width="53" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="戻る"/>
                                 <connections>
@@ -94,8 +99,18 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Gm5-Nl-Hbd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bYa-Nf-biA" firstAttribute="top" secondItem="C05-Ih-yCC" secondAttribute="bottom" constant="54" id="0pH-1u-ZBk"/>
+                            <constraint firstItem="C05-Ih-yCC" firstAttribute="leading" secondItem="Gm5-Nl-Hbd" secondAttribute="leading" id="HhX-zd-6A0"/>
+                            <constraint firstItem="bYa-Nf-biA" firstAttribute="centerX" secondItem="skI-wj-9I8" secondAttribute="centerX" id="PrM-F7-HUb"/>
+                            <constraint firstItem="C05-Ih-yCC" firstAttribute="top" secondItem="Gm5-Nl-Hbd" secondAttribute="top" constant="100" id="kvS-oZ-dSe"/>
+                            <constraint firstItem="Gm5-Nl-Hbd" firstAttribute="trailing" secondItem="C05-Ih-yCC" secondAttribute="trailing" id="leB-gR-6ze"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8Zu-5N-9Jn"/>
+                    <connections>
+                        <outlet property="imageView" destination="C05-Ih-yCC" id="Tx5-j8-yQ3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="86M-fJ-A7G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="K3l-wb-v5x" userLabel="Exit" sceneMemberID="exit"/>

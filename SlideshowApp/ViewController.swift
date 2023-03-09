@@ -35,6 +35,12 @@ class ViewController: UIViewController {
         imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageViewTapped(_:))))
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let expandedImageViewController: ExpandImageViewController = segue.destination as! ExpandImageViewController
+        
+        expandedImageViewController.image = imageList[selectedIndex]
+    }
+    
     private func loadImage() {
         imageList.append(UIImage(named: "ramenImage1.jpg")!)
         imageList.append(UIImage(named: "ramenImage2.jpg")!)
