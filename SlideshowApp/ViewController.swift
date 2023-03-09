@@ -31,6 +31,8 @@ class ViewController: UIViewController {
         loadImage()
         
         imageView.image = imageList[selectedIndex]
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(imageViewTapped(_:))))
     }
     
     private func loadImage() {
@@ -48,6 +50,10 @@ class ViewController: UIViewController {
         
         selectedIndex += 1
         imageView.image = imageList[selectedIndex]
+    }
+    
+    @objc func imageViewTapped(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "toExpandImageView", sender: nil)
     }
     
     @IBAction func onTouchNextButton(_ sender: Any) {
@@ -92,6 +98,9 @@ class ViewController: UIViewController {
         
         nextButton.isEnabled = false
         previousButton.isEnabled = false
+    }
+    
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
     }
 }
 

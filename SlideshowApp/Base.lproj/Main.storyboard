@@ -67,11 +67,40 @@
                         <outlet property="nextButton" destination="bam-qi-ncZ" id="Bg8-5U-bLF"/>
                         <outlet property="playButton" destination="KpZ-Xl-YCz" id="IDX-pK-ni5"/>
                         <outlet property="previousButton" destination="rUn-x8-x00" id="kdt-aK-3Ju"/>
+                        <segue destination="L7M-bW-diV" kind="show" identifier="toExpandImageView" id="5fe-HX-OMg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20" y="66"/>
+        </scene>
+        <!--Expand Image View Controller-->
+        <scene sceneID="1WA-Rj-7Pt">
+            <objects>
+                <viewController id="L7M-bW-diV" customClass="ExpandImageViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="skI-wj-9I8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYa-Nf-biA">
+                                <rect key="frame" x="168" y="227" width="53" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="戻る"/>
+                                <connections>
+                                    <segue destination="K3l-wb-v5x" kind="unwind" unwindAction="unwind:" id="mXW-ri-iPY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Gm5-Nl-Hbd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Zu-5N-9Jn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="86M-fJ-A7G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="K3l-wb-v5x" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="759" y="66"/>
         </scene>
     </scenes>
     <resources>
