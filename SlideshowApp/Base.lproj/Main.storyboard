@@ -22,10 +22,38 @@
                                     <constraint firstAttribute="width" secondItem="9vO-n2-nmE" secondAttribute="height" multiplier="800:533" id="n32-gV-mV0"/>
                                 </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="QoF-td-2gN">
+                                <rect key="frame" x="62.5" y="413" width="289" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bam-qi-ncZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="53" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="進む"/>
+                                        <connections>
+                                            <action selector="onTouchNextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="af1-US-PtC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUn-x8-x00">
+                                        <rect key="frame" x="118" y="0.0" width="53" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="戻る"/>
+                                        <connections>
+                                            <action selector="onTouchPreviousButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1tX-SZ-sJz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KpZ-Xl-YCz">
+                                        <rect key="frame" x="236" y="0.0" width="53" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="再生"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="QoF-td-2gN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="78N-ju-rMR"/>
+                            <constraint firstItem="QoF-td-2gN" firstAttribute="top" secondItem="9vO-n2-nmE" secondAttribute="bottom" constant="100" id="BVm-Iw-lzj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9vO-n2-nmE" secondAttribute="trailing" constant="80" id="IKl-N7-cZP"/>
                             <constraint firstItem="9vO-n2-nmE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="XNs-qF-Aqw"/>
                             <constraint firstItem="9vO-n2-nmE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="hIU-mi-y0c"/>

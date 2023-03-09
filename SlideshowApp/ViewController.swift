@@ -28,6 +28,28 @@ class ViewController: UIViewController {
         imageList.append(UIImage(named: "ramenImage2.jpg")!)
         imageList.append(UIImage(named: "ramenImage3.jpg")!)
     }
-
+    
+    @IBAction func onTouchNextButton(_ sender: Any) {
+        if selectedIndex == imageList.endIndex - 1  {
+            selectedIndex = imageList.startIndex
+            imageView.image = imageList[selectedIndex]
+            return
+        }
+        
+        selectedIndex += 1
+        imageView.image = imageList[selectedIndex]
+    }
+    
+    @IBAction func onTouchPreviousButton(_ sender: Any) {
+        if selectedIndex == imageList.startIndex  {
+            selectedIndex = imageList.endIndex - 1
+            imageView.image = imageList[selectedIndex]
+            return
+        }
+        
+        selectedIndex -= 1
+        imageView.image = imageList[selectedIndex]
+    }
+    
 }
 
